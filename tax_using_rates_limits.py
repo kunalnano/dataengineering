@@ -1,6 +1,6 @@
 limit_1 = 10000
 limit_2 = 30000
-limit 3 = 50000
+limit_3 = 50000
 limit_4 = 100000
 
 tax_rate_1 = 0
@@ -21,18 +21,18 @@ gross = float(input("Enter your salary"))
 exemptions = float(input('Enter your number of dependents'))
 
 #Conditional selection of refund based on number of dependents
-if (exemptions = 0):
+if (exemptions == 0):
     deduction = 0
 elif (gross < limit_1):
     deduction = 0
-elif (exemptions = 1):
-    deduction = 2500
-elif (exemptions = 2):
+elif (exemptions == 1):
+    deduction == 2500
+elif (exemptions == 2):
     deduction = 5000
-elif (exemptions = 3):
+elif (exemptions == 3):
     deduction = 7500
 else:
-    deduction = 7500
+    deduction = 0
     print("You have more than 3 dependants? You get $7500 deduction and a free TV!")
 
 # Income is gross minus refund deduction
@@ -60,15 +60,12 @@ elif (gross < limit_3):
     refund = (gross * tax_rate_3) - tax
 elif (gross < limit_4):
     refund = (gross * tax_rate_4) - tax
-      else
-      refund = (gross * tax_rate_5) - tax
+else:
+    refund = (gross * tax_rate_5) - tax
 
-    // Print all the results
-    print("For an income of $")
-    gross
-    print("your income tax payable is $")
-    tax
-    print("your net income is $")
-    income - tax
-    print("your refund is $")
-    refund
+#Print all the results
+
+print ("    Gross Pay:  ${:>10.2f}".format (income))
+print ("    Taxes:      ${:>10.2f}".format (tax))
+print ("    Net Pay:    ${:>10.2f}".format (income - tax))
+print ("    Refund:     ${:>10.2f}".format (refund))
