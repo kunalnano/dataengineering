@@ -25,7 +25,7 @@ try:
                 art=random.randint(1000, 9999)
                 amount=random.choice(["999889", "2399812", "1199700", "11154"])
                 sourceId=random.randint(1, 4)
-		mcc=random.randint(1000, 2000)
+		        mcc=random.randint(1000, 2000)
 		data1=random.randint(1000, 2300000)
                 transactionType   = random.choice(["04", "05"])
 		txnSubType   = random.choice(["U11", "U21", "U3", "U4"])
@@ -51,7 +51,7 @@ try:
 
 
 
-                producer.send('NPCIINPUT',(data + "\n").encode())
+                producer.send('stocks',(data + "\n").encode())
                 #print(data)
                 i = i + 1
                 time.sleep(1)
